@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ColorPicker</title>
+  <link rel="stylesheet" href="./color-picker.css">
+</head>
+
+<body>
+  <div class="section">
+    <div class="picker" id="color-picker">请选择颜色</div>
+  </div>
+  <script src="./color-picker.js"></script>
+  <script>
+    ColorPicker.create({
+      element: "color-picker",
+      color: "#fff",
+      change: function (ele, hex) {
+        ele.style.backgroundColor = hex;
+      }
+    })
+  </script>
+</body>
+
+</html>
